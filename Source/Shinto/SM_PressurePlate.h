@@ -18,7 +18,4 @@ class SHINTO_API ASM_PressurePlate : public AStaticMeshActor
 
 public:
 	
-	UFUNCTION()
-	void OnOverlapBegin()
-	
 };
