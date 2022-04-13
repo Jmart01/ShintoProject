@@ -1,0 +1,135 @@
+[33mcommit 344326cb74a8c8c260c1e17b57c2a76cfd21c9cf[m[33m ([m[1;36mHEAD -> [m[1;32mJohnathan-2[m[33m)[m
+Author: Martinez <jamart41@student.uiwtx.edu>
+Date:   Wed Apr 13 15:00:43 2022 -0500
+
+    added 3d plants
+
+[33mcommit 3f238a3ef14c4b571b7b80a8dd4def132c3be7dd[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/cameraShiftBranch[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Martinez <jamart41@student.uiwtx.edu>
+Date:   Tue Apr 12 20:19:31 2022 -0500
+
+    pressure plates move up and down when player stands on them
+
+[33mcommit a781e8c256c3456f5701b0e85c960bd7cfbec7a6[m
+Author: Martinez <jamart41@student.uiwtx.edu>
+Date:   Fri Apr 8 17:00:17 2022 -0500
+
+    started working on the pressure plates, currently WIP
+
+[33mcommit 028fbbc25793466fb5987f17947c616469b88cc3[m
+Author: Martinez <jamart41@student.uiwtx.edu>
+Date:   Thu Mar 31 12:43:55 2022 -0500
+
+    fixed engine version by changing Shinto.uproject engine association to 5.0
+
+[33mcommit bc0e4736879e991832bcb09f6ca6f42cc3225963[m
+Merge: e0e44fb 6c42feb
+Author: Martinez <jamart41@student.uiwtx.edu>
+Date:   Thu Mar 31 12:25:12 2022 -0500
+
+    merged with Johnathan
+
+[33mcommit 6c42feb142804264b7e58549240b26a3c1767550[m
+Author: Rios <jlrios@student.uiwtx.edu>
+Date:   Tue Mar 29 20:28:54 2022 -0500
+
+    had to delete old blueprint to allow build to work, also set up array for map build under packaging in project settings
+
+[33mcommit 8214fb6b84e24f722f91e256e76d45e69da09a92[m
+Author: Rios <jlrios@student.uiwtx.edu>
+Date:   Tue Mar 29 19:35:00 2022 -0500
+
+    added in ramp and some foliage for graybox two, next merge with main
+
+[33mcommit e0e44fb55cb19e79f921300ed4bf5bed260ea0ab[m
+Merge: 0de7f70 886caa6
+Author: Jmart01 <77988208+Jmart01@users.noreply.github.com>
+Date:   Tue Mar 29 19:12:58 2022 -0500
+
+    Merge pull request #3 from Jmart01/Cameron
+    
+    Card Trees, Stone Lanterns, Ocean Rocks
+
+[33mcommit 886caa6ac97ed7e0a71c51a0ca70507587e68b7e[m[33m ([m[1;31morigin/Cameron[m[33m)[m
+Author: Cameron <seilhan@student.uiwtx.edu>
+Date:   Tue Mar 29 18:31:05 2022 -0500
+
+    Card Trees, Stone Lanterns, Ocean Rocks
+
+[33mcommit 0de7f70aa18e72e477d44cc6d3b062885efeab28[m
+Author: Martinez <jamart41@student.uiwtx.edu>
+Date:   Tue Mar 29 16:56:10 2022 -0500
+
+    player models updated, sorry jill
+
+[33mcommit dd3d553d45c403b7f4e64908807146fe8ab4c0e6[m
+Author: Rios <jlrios@student.uiwtx.edu>
+Date:   Mon Mar 28 20:36:34 2022 -0500
+
+    add Terrian Textures
+
+[33mcommit 02a92e3392dc4dfcb48376079eb7d92818232c14[m
+Merge: 68e03f9 d49b9f4
+Author: Jmart01 <77988208+Jmart01@users.noreply.github.com>
+Date:   Sat Mar 26 14:24:18 2022 -0500
+
+    Merge pull request #2 from Jmart01/JohnathanBranch
+    
+    Johnathan branch
+
+[33mcommit d49b9f43122dee274b2af2810ab09f9d2c7ef74d[m
+Author: SirFlufficorn <100977336+SirFlufficorn@users.noreply.github.com>
+Date:   Sat Mar 26 13:24:21 2022 -0500
+
+    finalizing level layout, merge with main
+
+[33mcommit cbd2e292b2499926b28dad6b33dbb7c6ad20aaea[m
+Author: SirFlufficorn <100977336+SirFlufficorn@users.noreply.github.com>
+Date:   Sat Mar 26 09:15:19 2022 -0500
+
+    Terrain for Graybox 2 sculpted and placed in a world partition map, will need to be merged with main for graybox artists to lay down their assets for monday
+
+[33mcommit 68e03f99a787451dc839e66736eaf9678ded3823[m
+Merge: 65a12e2 d1d5cd0
+Author: Jmart01 <77988208+Jmart01@users.noreply.github.com>
+Date:   Tue Mar 15 21:40:58 2022 -0500
+
+    Merge pull request #1 from Jmart01/JillGraybox1Final
+    
+    final editing on Graybox pass #1, starting graybox pass #2 next
+
+[33mcommit d1d5cd0dcb5f0040096ccc842b675aff5f337cd3[m
+Author: SirFlufficorn <100977336+SirFlufficorn@users.noreply.github.com>
+Date:   Tue Mar 15 21:19:57 2022 -0500
+
+    final editing on Graybox pass #1, starting graybox pass #2 next
+
+[33mcommit 65a12e2335ea8b000e326c703306be8314e5682b[m
+Author: SirFlufficorn <100977336+SirFlufficorn@users.noreply.github.com>
+Date:   Tue Mar 15 13:14:02 2022 -0500
+
+    vert painted
+
+[33mcommit bcb2ba8757ee6fbbceb8a9a911c4bf6b26156440[m
+Author: SirFlufficorn <100977336+SirFlufficorn@users.noreply.github.com>
+Date:   Tue Mar 15 12:34:59 2022 -0500
+
+    Reset history, last change was teleport added
+
+[33mcommit 642ca88227c595d2716c0126c5b67ab1fd3561e0[m
+Author: Martinez <jamart41@student.uiwtx.edu>
+Date:   Sun Mar 13 13:23:12 2022 -0500
+
+    got rid of example text
+
+[33mcommit 4ec7c36188468b7056a3668913d2df22fd4e1732[m
+Author: Martinez <jamart41@student.uiwtx.edu>
+Date:   Sun Mar 13 13:20:41 2022 -0500
+
+    added an example
+
+[33mcommit 6459775fff30aa33a3ae1501e530de0eaea47629[m
+Author: Martinez <jamart41@student.uiwtx.edu>
+Date:   Wed Mar 9 07:17:40 2022 -0600
+
+    initial commit, character is able to move using keyboard and mouse, try with controller next
