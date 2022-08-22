@@ -42,6 +42,7 @@ void ACharacterBase::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	PlayerInputComponent->BindAxis("MoveRight", this, &ACharacterBase::MoveRight);
 	PlayerInputComponent->BindAxis("Turn", this, &ACharacterBase::Turn);
 	PlayerInputComponent->BindAxis("LookUp", this, &ACharacterBase::LookUp);
+	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacterBase::Jump);
 
 }
 
