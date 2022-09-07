@@ -28,6 +28,7 @@ protected:
 	//Components that will be attached to the character base
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	USpringArmComponent* PlayerEyeSpringArm;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UCameraComponent* PlayerEye;
 
 	//functions that deal with movement
