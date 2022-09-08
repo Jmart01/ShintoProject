@@ -9,11 +9,15 @@ ACharacterBase::ACharacterBase()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	PlayerEyeSpringArm = CreateDefaultSubobject<USpringArmComponent>("PlayerEyeSpringArm");
+	//PlayerEyeSpringArm = CreateDefaultSubobject<USpringArmComponent>("PlayerEyeSpringArm");
 	PlayerEye = CreateDefaultSubobject<UCameraComponent>("PlayerEye");
-	PlayerEyeSpringArm->SetupAttachment(GetRootComponent());
-	PlayerEye->SetupAttachment(PlayerEyeSpringArm, USpringArmComponent::SocketName);
-	PlayerEyeSpringArm->bUsePawnControlRotation = true;
+	SkeletalMeshToHide = GetMesh();
+	SkeletalMeshToShow = CreateDefaultSubobject<USkeletalMeshComponent>("SkeletalMeshToShow");
+	//PlayerEyeSpringArm->SetupAttachment(GetRootComponent());
+	//PlayerEye->SetupAttachment(PlayerEyeSpringArm, USpringArmComponent::SocketName);
+	//PlayerEyeSpringArm->bUsePawnControlRotation = true;
+	SkeletalMeshToShow->SetupAttachment(PlayerEye);
+	
 	bUseControllerRotationYaw = false;
 	GetCharacterMovement()->bOrientRotationToMovement = true;
 	GetCharacterMovement()->RotationRate = FRotator(0, 600, 0);
