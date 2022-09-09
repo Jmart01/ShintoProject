@@ -51,6 +51,6 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
+private:
 	
-
 };
