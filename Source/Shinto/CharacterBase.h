@@ -26,10 +26,17 @@ protected:
 		//void SpawnInGameUI();
 
 	//Components that will be attached to the character base
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	USpringArmComponent* PlayerEyeSpringArm;
+	/*UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	USpringArmComponent* PlayerEyeSpringArm;*/
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UCameraComponent* PlayerEye;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		USkeletalMeshComponent* SkeletalMeshToHide;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		USkeletalMeshComponent* SkeletalMeshToShow;
+
 
 	//functions that deal with movement
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
@@ -44,6 +51,6 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
+private:
 	
-
 };

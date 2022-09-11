@@ -9,14 +9,22 @@ ACharacterBase::ACharacterBase()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	PlayerEyeSpringArm = CreateDefaultSubobject<USpringArmComponent>("PlayerEyeSpringArm");
+	
+	//PlayerEyeSpringArm = CreateDefaultSubobject<USpringArmComponent>("PlayerEyeSpringArm");
 	PlayerEye = CreateDefaultSubobject<UCameraComponent>("PlayerEye");
-	PlayerEyeSpringArm->SetupAttachment(GetRootComponent());
-	PlayerEye->SetupAttachment(PlayerEyeSpringArm, USpringArmComponent::SocketName);
-	PlayerEyeSpringArm->bUsePawnControlRotation = true;
+	SkeletalMeshToHide = GetMesh();
+	SkeletalMeshToHide->SetActive(false);
+	SkeletalMeshToShow = CreateDefaultSubobject<USkeletalMeshComponent>("SkeletalMeshToShow");
+	SkeletalMeshToShow->AttachToComponent(PlayerEye,FAttachmentTransformRules::KeepWorldTransform);
+	PlayerEye->SetupAttachment(GetRootComponent());
+	PlayerEye->bUsePawnControlRotation = true;
 	bUseControllerRotationYaw = false;
 	GetCharacterMovement()->bOrientRotationToMovement = true;
 	GetCharacterMovement()->RotationRate = FRotator(0, 600, 0);
+
+	//PlayerEyeSpringArm->SetupAttachment(GetRootComponent());
+	//PlayerEye->SetupAttachment(PlayerEyeSpringArm, USpringArmComponent::SocketName);
+	//PlayerEyeSpringArm->bUsePawnControlRotation = true;
 }
 
 // Called when the game starts or when spawned
