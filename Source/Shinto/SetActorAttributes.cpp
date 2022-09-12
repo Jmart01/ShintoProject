@@ -3,3 +3,6 @@
 
 #include "SetActorAttributes.h"
 
+USetActorAttributes::USetActorAttributes()
+{
+}
