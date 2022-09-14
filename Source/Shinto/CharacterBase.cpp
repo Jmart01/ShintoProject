@@ -15,7 +15,8 @@ ACharacterBase::ACharacterBase()
 	SkeletalMeshToHide = GetMesh();
 	SkeletalMeshToHide->SetActive(false);
 	SkeletalMeshToShow = CreateDefaultSubobject<USkeletalMeshComponent>("SkeletalMeshToShow");
-	SkeletalMeshToShow->AttachToComponent(PlayerEye,FAttachmentTransformRules::KeepWorldTransform);
+	SkeletalMeshToShow->SetupAttachment(PlayerEye);
+	//SkeletalMeshToShow->AttachToComponent(PlayerEye,FAttachmentTransformRules::KeepWorldTransform);
 	PlayerEye->SetupAttachment(GetRootComponent());
 	PlayerEye->bUsePawnControlRotation = true;
 	bUseControllerRotationYaw = false;
