@@ -3,3 +3,7 @@
 
 #include "GameplayAbilityBase.h"
 
+UGameplayAbilityBase::UGameplayAbilityBase()
+{
+
+}
