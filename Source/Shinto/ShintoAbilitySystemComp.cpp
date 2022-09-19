@@ -3,3 +3,6 @@
 
 #include "ShintoAbilitySystemComp.h"
 
+UShintoAbilitySystemComp::UShintoAbilitySystemComp()
+{
+}
