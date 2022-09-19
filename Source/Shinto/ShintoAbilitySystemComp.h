@@ -13,5 +13,5 @@ UCLASS()
 class SHINTO_API UShintoAbilitySystemComp : public UAbilitySystemComponent
 {
 	GENERATED_BODY()
-		UShintoAbilitySystemComp();
+	
 };

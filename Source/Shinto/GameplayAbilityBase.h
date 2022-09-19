@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "Abilities/GameplayAbility.h"
-#include "Shinto.h"
 #include "GameplayAbilityBase.generated.h"
 
 /**
@@ -14,9 +13,5 @@ UCLASS()
 class SHINTO_API UGameplayAbilityBase : public UGameplayAbility
 {
 	GENERATED_BODY()
-
-	UGameplayAbilityBase();
-public:
-	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Ability")
-	EShintoAbilityInputID AbilityInputID = EShintoAbilityInputID::None;
+	
 };

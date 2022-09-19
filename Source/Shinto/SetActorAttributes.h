@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "AttributeSet.h"
-#include "AbilitySystemComponent.h"
 #include "SetActorAttributes.generated.h"
 
 #define ATTRIBUTE_ACCESSORS(ClassName, PropertyName)\
@@ -24,12 +23,4 @@ class SHINTO_API USetActorAttributes : public UAttributeSet
 	
 public:
 	//continue video from 9:24
-
-	USetActorAttributes();
-
-	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
-	FGameplayAttributeData Health;
-
-	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
-		FGameplayAttributeData AttackPower;
 };
