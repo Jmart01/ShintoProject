@@ -1,13 +1,14 @@
 #pragma once
 #include "Camera/CameraComponent.h"
 #include "CoreMinimal.h"
+#include "GenericTeamAgentInterface.h"
 #include "GameFramework/Character.h"
 #include "AbilitySystemInterface.h"
 #include <GameplayEffectTypes.h>
 #include "ShintoAbilitySystemComp.h"
 #include "CharacterBase.generated.h"
 UCLASS()
-class SHINTO_API ACharacterBase : public ACharacter, public IAbilitySystemInterface
+class SHINTO_API ACharacterBase : public ACharacter, public IAbilitySystemInterface, public IGenericTeamAgentInterface
 {
 	GENERATED_BODY()
 public:
@@ -64,12 +65,10 @@ protected:
 	UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Category = "GAS")
 		TArray<TSubclassOf<class UGameplayAbilityBase>> DefaultAbilities;
 
-
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
+		int32 ID = 0;
 
-	// Called to bind functionality to input
-private:
-	
 };
