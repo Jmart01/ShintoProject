@@ -41,6 +41,7 @@ void ACharacterBase::BeginPlay()
 	GiveAbilities();
 	if (AbilitySystemComp && InputComponent)
 	{
+		UE_LOG(LogTemp, Warning, TEXT("gets inside of the if statement in begin play"));
 		const FGameplayAbilityInputBinds Binds("Confirm", "Cancel", "EShintoAbilityInputID", 
 			static_cast<int32>(EShintoAbilityInputID::Confirm), static_cast<int32>(EShintoAbilityInputID::Cancel));
 		AbilitySystemComp->BindAbilityActivationToInputComponent(InputComponent, Binds);
