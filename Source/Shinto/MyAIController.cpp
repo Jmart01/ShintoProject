@@ -4,6 +4,7 @@
 #include "MyAIController.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "GameFramework/Controller.h"
 
 
 AMyAIController::AMyAIController()
@@ -12,13 +13,17 @@ AMyAIController::AMyAIController()
 	SightConfig = CreateDefaultSubobject<UAISenseConfig_Sight>("SightConfig");
 	if (SightConfig && PerceptionComp)
 	{
-		SightConfig->SightRadius = 2500.f;
-		SightConfig->LoseSightRadius = 50000.f;
-		SightConfig->PeripheralVisionAngleDegrees = 60.f;
+		SightConfig->SightRadius = AISightRadius;
+		SightConfig->LoseSightRadius = AILoseSightRadius;
+		SightConfig->PeripheralVisionAngleDegrees = AISightAngle;
 
+		SightConfig->DetectionByAffiliation.bDetectNeutrals = true;
 		SightConfig->DetectionByAffiliation.bDetectEnemies = true;
 		SightConfig->DetectionByAffiliation.bDetectFriendlies = true;
-		
+		//GetPerceptionComponent()->SetDominantSense(*SightConfig->GetSenseImplementation());
+		//GetPerceptionComponent()->ConfigureSense(*SightConfig);
+		PerceptionComp->SetDominantSense(*SightConfig->GetSenseImplementation());
+		PerceptionComp->ConfigureSense(*SightConfig);
 	}
 }
 
@@ -36,6 +41,12 @@ void AMyAIController::BeginPlay()
 
 }
 
+void AMyAIController::OnPossess(APawn* PawnToPossess)
+{
+	Super::OnPossess(PawnToPossess);
+}
+
+
 void AMyAIController::PerceptionUpdated(AActor* Target, FAIStimulus Stimulus)
 {
 	if (Stimulus.WasSuccessfullySensed())
@@ -44,8 +55,17 @@ void AMyAIController::PerceptionUpdated(AActor* Target, FAIStimulus Stimulus)
 		UAISenseConfig* StimulusConfig = PerceptionComp->GetSenseConfig(Stimulus.Type);
 		if (!ExistingTarget || StimulusConfig->GetClass() == UAISenseConfig_Sight::StaticClass())
 		{
-			//working on the team affiliation, resume the video at 1:35
-			GetBlackboardComponent()->SetValueAsObject(FName("Target"), Target);
+			UE_LOG(LogTemp, Warning, TEXT("Detected Something"));
+			if (Target == Cast<ACharacterBase, AActor>(Target))
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Tareget is the player"));
+				GetBlackboardComponent()->SetValueAsObject(FName("Target"), Target);
+			}
+			else
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Not detecting player"));
+			}
+			
 		}
 		else
 		{
