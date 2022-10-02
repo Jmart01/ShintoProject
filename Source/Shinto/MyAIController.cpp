@@ -20,8 +20,7 @@ AMyAIController::AMyAIController()
 		SightConfig->DetectionByAffiliation.bDetectNeutrals = true;
 		SightConfig->DetectionByAffiliation.bDetectEnemies = true;
 		SightConfig->DetectionByAffiliation.bDetectFriendlies = true;
-		//GetPerceptionComponent()->SetDominantSense(*SightConfig->GetSenseImplementation());
-		//GetPerceptionComponent()->ConfigureSense(*SightConfig);
+
 		PerceptionComp->SetDominantSense(*SightConfig->GetSenseImplementation());
 		PerceptionComp->ConfigureSense(*SightConfig);
 	}
@@ -34,16 +33,18 @@ void AMyAIController::BeginPlay()
 	{
 		PerceptionComp->OnTargetPerceptionUpdated.AddDynamic(this, &AMyAIController::PerceptionUpdated);
 	}
-	if(BehaviorTreeToUse)
-	{
-		RunBehaviorTree(BehaviorTreeToUse);
-	}
+	
 
 }
 
 void AMyAIController::OnPossess(APawn* PawnToPossess)
 {
 	Super::OnPossess(PawnToPossess);
+	if (BehaviorTreeToUse)
+	{
+		RunBehaviorTree(BehaviorTreeToUse);
+	}
+	
 }
 
 
@@ -71,10 +72,20 @@ void AMyAIController::PerceptionUpdated(AActor* Target, FAIStimulus Stimulus)
 		{
 			TArray<AActor*> ActorInSight;
 			PerceptionComp->GetCurrentlyPerceivedActors(UAISenseConfig_Sight::StaticClass(), ActorInSight);
-			if (ActorInSight.Num() == 0)
+			for (int i = 0; i < ActorInSight.Num(); i++)
 			{
-				GetBlackboardComponent()->ClearValue(FName("Target"));
+				/*DistanceToPlayer = GetPawn()->GetDistanceTo(ActorInSight[i]);
+				if (DistanceToPlayer > AILoseSightRadius)
+				{
+					
+				}*/
+				if (ActorInSight.Num() == 0)
+				{
+					UE_LOG(LogTemp, Warning, TEXT("Clearing Target value"));
+					GetBlackboardComponent()->ClearValue(FName("Target"));
+				}
 			}
+			
 		}
 	}
 }

@@ -42,4 +42,6 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI Perception")
 		float AISightAngle = 90.f;
 
+	//float DistanceToPlayer;
+
 };
