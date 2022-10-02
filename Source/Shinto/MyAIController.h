@@ -16,6 +16,7 @@ class SHINTO_API AMyAIController : public AAIController
 	GENERATED_BODY()
 public:
 	AMyAIController();
+
 	
 	
 
@@ -28,6 +29,7 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "AI Perception")
 		UAISenseConfig_Sight* SightConfig;
 	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaTime) override;
 
 	virtual void OnPossess(APawn* PawnToPossess) override;
 	

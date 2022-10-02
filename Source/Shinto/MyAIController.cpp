@@ -47,6 +47,12 @@ void AMyAIController::OnPossess(APawn* PawnToPossess)
 	
 }
 
+void AMyAIController::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+}
+
 
 void AMyAIController::PerceptionUpdated(AActor* Target, FAIStimulus Stimulus)
 {
