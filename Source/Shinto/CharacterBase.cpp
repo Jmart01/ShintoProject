@@ -29,7 +29,7 @@ ACharacterBase::ACharacterBase()
 
 	AbilitySystemComp = CreateDefaultSubobject<UShintoAbilitySystemComp>("AbilitySystemComp");
 	Attributes = CreateDefaultSubobject<USetActorAttributes>("Attributes");
-
+	
 }
 
 // Called when the game starts or when spawned
