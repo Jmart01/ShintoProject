@@ -92,4 +92,8 @@ void AMyAIController::PerceptionUpdated(AActor* Target, FAIStimulus Stimulus)
 			}
 		}
 	}
+	else
+	{
+		GetBlackboardComponent()->ClearValue(FName("Target"));
+	}
 }
