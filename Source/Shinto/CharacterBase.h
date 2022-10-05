@@ -14,7 +14,6 @@ public:
 	// Sets default values for this character's properties
 	ACharacterBase();
 
-	//virtual void PossessedBy(AController* NewController) override;
 
 protected:
 	// Called when the game starts or when spawned
@@ -28,8 +27,7 @@ protected:
 		//void SpawnInGameUI();
 
 	//Components that will be attached to the character base
-	/*UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	USpringArmComponent* PlayerEyeSpringArm;*/
+	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UCameraComponent* PlayerEye;
 
