@@ -42,7 +42,7 @@ protected:
 	float AISightRadius = 2500.f;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI Perception")
-		float AILoseSightRadius = 50000.0f;
+		float AILoseSightRadius = 2550.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI Perception")
 		float AISightAngle = 90.f;
 
