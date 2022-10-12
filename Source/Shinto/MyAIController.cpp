@@ -4,6 +4,7 @@
 #include "MyAIController.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "AIModule/Classes/Navigation/CrowdFollowingComponent.h"
 #include "GameFramework/Controller.h"
 
 
@@ -50,7 +51,6 @@ void AMyAIController::OnPossess(APawn* PawnToPossess)
 void AMyAIController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 
@@ -72,7 +72,6 @@ void AMyAIController::PerceptionUpdated(AActor* Target, FAIStimulus Stimulus)
 			{
 				UE_LOG(LogTemp, Warning, TEXT("Not detecting player"));
 			}
-			
 		}
 		else
 		{
@@ -91,7 +90,10 @@ void AMyAIController::PerceptionUpdated(AActor* Target, FAIStimulus Stimulus)
 					GetBlackboardComponent()->ClearValue(FName("Target"));
 				}
 			}
-			
 		}
+	}
+	else
+	{
+		GetBlackboardComponent()->ClearValue(FName("Target"));
 	}
 }
