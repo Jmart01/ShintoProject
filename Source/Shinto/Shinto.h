@@ -1,15 +1,3 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
-
-#pragma once
-
-#include "CoreMinimal.h"
-
-UENUM(BlueprintType)
-enum class EShintoAbilityInputID : uint8
-{
-	None,
-	Confirm,
-	Cancel,
-	Melee,
-	Heal
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:63b6e2ab7cd0519d97ac76dd981531703922735d0f9c0347d62583878bd17ffd
+size 198

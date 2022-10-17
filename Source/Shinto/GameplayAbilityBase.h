@@ -1,22 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-#pragma once
-
-#include "CoreMinimal.h"
-#include "Abilities/GameplayAbility.h"
-#include "Shinto.h"
-#include "GameplayAbilityBase.generated.h"
-
-/**
- * 
- */
-UCLASS()
-class SHINTO_API UGameplayAbilityBase : public UGameplayAbility
-{
-	GENERATED_BODY()
-
-		UGameplayAbilityBase();
-public:
-	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Ability")
-		EShintoAbilityInputID AbilityInputID = EShintoAbilityInputID::None;
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:c92253ef78431e9743a337e29e460cb17c9f604f097e42d8f4e511d51394b4f9
+size 501

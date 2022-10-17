@@ -1,19 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
-#include "ShintoGameModeBase.h"
-
-AShintoGameModeBase::AShintoGameModeBase()
-{
-	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/SHINTO_Content/Player/M_CharacterBase"));
-	if (PlayerPawnBPClass.Class != NULL)
-	{
-		
-		DefaultPawnClass = PlayerPawnBPClass.Class;
-	}
-	else
-	{
-		//try to find the blueprint of the player
-		//PlayerPawnBPClass = 
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c99e1f94f7e1cd7a9fa0a744461a3a3c93c3f7e8b57472662648d0f9f00cc5a2
+size 454

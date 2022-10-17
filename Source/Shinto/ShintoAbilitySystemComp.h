@@ -1,17 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-#pragma once
-
-#include "CoreMinimal.h"
-#include "AbilitySystemComponent.h"
-#include "ShintoAbilitySystemComp.generated.h"
-
-/**
- * 
- */
-UCLASS()
-class SHINTO_API UShintoAbilitySystemComp : public UAbilitySystemComponent
-{
-	GENERATED_BODY()
-		UShintoAbilitySystemComp();
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:cdcf09c308b6ec3eff3f33e1cc83c49769248c94e3c4292ec37c21bbe7c78a3f
+size 352

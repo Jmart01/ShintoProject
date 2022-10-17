@@ -1,14 +1,3 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
-
-using UnrealBuildTool;
-
-public class Shinto : ModuleRules
-{
-	public Shinto(ReadOnlyTargetRules Target) : base(Target)
-	{
-		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
-
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "AIModule","NavigationSystem" });
-		PrivateDependencyModuleNames.AddRange(new string[] { "GameplayAbilities", "GameplayTags", "GameplayTasks" });
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3b90c0913e7780e55dd9b326806c60e1fadf3d098a1787970ef8468b6c73f933
+size 498

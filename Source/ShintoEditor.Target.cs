@@ -1,14 +1,3 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
-
-using UnrealBuildTool;
-using System.Collections.Generic;
-
-public class ShintoEditorTarget : TargetRules
-{
-	public ShintoEditorTarget(TargetInfo Target) : base(Target)
-	{
-		Type = TargetType.Editor;
-		DefaultBuildSettings = BuildSettingsVersion.V2;
-		ExtraModuleNames.Add("Shinto");
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:49805fa449c429b9c677debe1866d58babad9de099a02f85748564e71f653744
+size 339

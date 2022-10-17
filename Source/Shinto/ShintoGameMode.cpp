@@ -1,15 +1,3 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
-
-#include "ShintoGameMode.h"
-#include "ShintoCharacter.h"
-#include "UObject/ConstructorHelpers.h"
-
-AShintoGameMode::AShintoGameMode()
-{
-	// set default pawn class to our Blueprinted character
-	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/ThirdPersonCPP/Blueprints/ThirdPersonCharacter"));
-	if (PlayerPawnBPClass.Class != NULL)
-	{
-		DefaultPawnClass = PlayerPawnBPClass.Class;
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a94befe054345c4e927baedaf0a32c2e9a86b3821a1aef4f1c1467b81d51f8c5
+size 464
