@@ -15,3 +15,4 @@ ShintoProject/Content/SHINTO_Content/level/base_Level_new_start.umap filter=lfs 
 *.cs filter=lfs diff=lfs merge=lfs -text
 *.cpp filter=lfs diff=lfs merge=lfs -text
 *.h filter=lfs diff=lfs merge=lfs -text
+Content/SHINTO_Content/levels/base_Level_new_start_BuiltData.uasset filter=lfs diff=lfs merge=lfs -text
